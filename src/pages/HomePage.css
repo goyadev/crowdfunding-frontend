@@ -1,6 +1,16 @@
+@font-face {
+  font-family: "BrightMelody";
+  src: local("BrightMelody"),
+    url(".../public/fonts/brightmelodypersonaluseonly-ovogd.otf")
+      format("opentype");
+  font-weight: normal;
+}
+
 #project-list {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  column-gap: 10px;
-  row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+  margin-top: 5vh;
 }

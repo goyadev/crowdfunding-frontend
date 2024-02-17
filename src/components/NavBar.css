@@ -1,0 +1,20 @@
+a {
+  text-decoration: none;
+  font-family: "Monserrat", sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 10px;
+  margin-top: 60px;
+}
+
+li {
+  margin: 5px;
+  font-size: 16px;
+}
