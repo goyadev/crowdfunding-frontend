@@ -5,7 +5,7 @@ export function Head() {
     <>
       <div>
         <img
-          src="/public/ARTSTARTER-header.png"
+          src="/ARTSTARTER-header.png"
           className="headerimage"
           alt="Artstarter, Crowdfunding for Creatives"
         />

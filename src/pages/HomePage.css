@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "BrightMelody";
-  src: local("BrightMelody"),
-    url(".../public/fonts/brightmelodypersonaluseonly-ovogd.otf")
-      format("opentype");
-  font-weight: normal;
-}
-
 #project-list {
   display: flex;
   flex-direction: column;

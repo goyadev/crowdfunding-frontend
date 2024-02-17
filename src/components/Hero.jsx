@@ -5,7 +5,7 @@ export function Hero() {
     <>
       <div>
         <img
-          src="/public/ARTSTARTER-HERO.png"
+          src="/ARTSTARTER-HERO.png"
           className="headerimage"
           alt="black and white street art"
         />
