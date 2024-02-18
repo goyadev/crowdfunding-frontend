@@ -6,3 +6,12 @@
   row-gap: 50px;
   margin-top: 5vh;
 }
+
+.headersection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+  margin-top: 5vh;
+}

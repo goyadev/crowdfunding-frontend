@@ -3,14 +3,14 @@ import "./Hero.css";
 export function Hero() {
   return (
     <>
-      <div>
+      <div className="headersection">
         <img
           src="/ARTSTARTER-HERO.png"
           className="headerimage"
+          id="heroimage"
           alt="black and white street art"
         />
       </div>
-      ;
     </>
   );
 }

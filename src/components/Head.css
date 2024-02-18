@@ -1,8 +1,32 @@
-a {
-  font-family: "Monserrat" sans-serif;
-  color: pink;
+.headersection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+  margin-top: 5vh;
 }
 
-.headerimage {
-  max-width: 800px;
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .headerimage {
+    max-width: 1000px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .headerimage {
+    max-width: 760px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .headerimage {
+    max-width: 600px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .headerimage {
+    max-width: 360px;
+  }
 }

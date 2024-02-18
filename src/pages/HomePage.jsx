@@ -11,13 +11,15 @@ function HomePage() {
 
   if (error) return <h1>{error.message}</h1>;
   return (
-    <div id="project-list">
+    <>
       <Head />
       <Hero />
-      {projects.map((projectData, key) => {
-        return <ProjectCard key={key} projectData={projectData} />;
-      })}
-    </div>
+      <div id="project-list">
+        {projects.map((projectData, key) => {
+          return <ProjectCard key={key} projectData={projectData} />;
+        })}
+      </div>
+    </>
   );
 }
 export default HomePage;
