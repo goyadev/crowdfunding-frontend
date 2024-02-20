@@ -1,12 +1,3 @@
-.headersection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 50px;
-  margin-top: 5vh;
-}
-
 @media all and (min-width: 1024px) and (max-width: 1280px) {
   .headerimage {
     max-width: 1000px;
@@ -15,13 +6,13 @@
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .headerimage {
-    max-width: 760px;
+    max-width: 680px;
   }
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
   .headerimage {
-    max-width: 600px;
+    max-width: 480px;
   }
 }
 

@@ -1,10 +1,11 @@
 #project-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 50px;
-  margin-top: 5vh;
+  justify-content: start;
+  align-items: start;
+  row-gap: 5px;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 .headersection {
@@ -14,4 +15,23 @@
   align-items: center;
   row-gap: 50px;
   margin-top: 5vh;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 5px;
+}
+
+/* media queries */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+}
+
+@media all and (max-width: 480px) {
 }
