@@ -1,3 +1,10 @@
+.navsection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
   font-family: "Monserrat", sans-serif;
@@ -29,7 +36,7 @@ a {
   justify-content: start;
   margin: 10px;
   margin-top: 60px;
-  max-width: 150px;
+  max-width: fit-content;
 }
 
 li {
@@ -39,6 +46,10 @@ li {
 
 ul {
   list-style-type: none;
+}
+
+.icon {
+  max-width: 60px;
 }
 
 /* media queries */
