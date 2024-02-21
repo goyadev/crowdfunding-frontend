@@ -1,5 +1,4 @@
 import "./Head.css";
-import NavBar from "./NavBar";
 
 export function Head() {
   return (

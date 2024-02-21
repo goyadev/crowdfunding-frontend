@@ -6,7 +6,8 @@ import ProjectPage from "./pages/ProjectPage.jsx";
 import NavBar from "./components/NavBar.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import AllProjectsPage from "./pages/AllProjectsPage.jsx";
-
+import LoginPage from "./pages/LoginPage.jsx";
+import CreateUserPage from "./pages/CreateUserPage.jsx";
 // { path: "/", element: <ContactPage /> },
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
+      { path: "/login", element: <LoginPage /> },
       {
         path: "/project/:id",
         element: <ProjectPage />,
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <AllProjectsPage />,
+      },
+      {
+        path: "/create-account",
+        element: <CreateUserPage />,
       },
     ],
   },
