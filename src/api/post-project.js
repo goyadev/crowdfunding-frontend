@@ -9,6 +9,7 @@ async function postProject(title, description, goal, image) {
     // Tell server we are sending JSON data
     headers: {
       "Content-Type": "application/json",
+      authorization: `Token ${window.localStorage.getItem("token")}`,
     },
     // what is the data we're sending
     body: JSON.stringify({

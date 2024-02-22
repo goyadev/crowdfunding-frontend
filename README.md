@@ -1,8 +1,12 @@
+# Crowdfunding Front-End
+
+Goya Zheng
+
 # Artstarter: crowdfunding for creatives
 
 ## Project requirements
 
-[ ] A link to the deployed project.
+### Deployed Project Link
 
 [ ] Be separated into two distinct projects: an API built using the Django RestFramework and a website built using React.
 
