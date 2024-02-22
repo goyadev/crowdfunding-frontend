@@ -22,6 +22,9 @@ function NavBar() {
             <li>
               <Link to="/create-account">CREATE ACCOUNT</Link>
             </li>
+            <li>
+              <Link to="/create-project">CREATE PROJECT</Link>
+            </li>
           </ul>
         </nav>
         <img src="/search.png" className="icon" id="search" alt="searchbar" />

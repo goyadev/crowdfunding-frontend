@@ -1,5 +1,5 @@
 // create asyn function for postProject
-async function postProject() {
+async function postProject(title, description, goal, image) {
   // const URL from .env
   const url = `${import.meta.env.VITE_API_URL}/projects/`;
   // const reponse for URL with fetch, method is POST
@@ -15,8 +15,7 @@ async function postProject() {
       title: title,
       description: description,
       goal: goal,
-      date_created: date_created,
-      owner: owner,
+      image: image,
     }),
   });
   // what errors should we use

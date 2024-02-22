@@ -8,7 +8,7 @@ import ContactPage from "./pages/ContactPage.jsx";
 import AllProjectsPage from "./pages/AllProjectsPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import CreateUserPage from "./pages/CreateUserPage.jsx";
-// { path: "/", element: <ContactPage /> },
+import CreateProjectsPage from "./pages/CreateProjectPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/create-account",
         element: <CreateUserPage />,
+      },
+      {
+        path: "/create-project",
+        element: <CreateProjectsPage />,
       },
     ],
   },

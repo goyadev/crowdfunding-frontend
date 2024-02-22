@@ -1,20 +1,43 @@
-// import { useState } from "react";
-// import createUser from "../api/post-create-user";
-// import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import createUser from "../api/post-create-user";
+import { useNavigate } from "react-router-dom";
 
 export function CreateUserForm() {
-  //   const navigate = useNavigate();
-  const logfunc = () => console.log("weeee");
+  const navigate = useNavigate();
 
-  // keep track of username with useState
-  // keep track of password with useState
+  const [username, setUsername] = useState("");
+  // const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  // update username when value changes
-  // update password when value changes
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+    console.log("Username test");
+  };
 
-  // validate that email has @something.com
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  //   console.log("Email test");
+  // };
 
-  // when the form is submitted, do the API coolness
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+    console.log("Password test");
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      // Call the createUser API function with the user data
+      await createUser(username, password);
+
+      // Optionally, you can navigate to another page after successful user creation
+      navigate("/success");
+    } catch (error) {
+      console.error("Error creating user:", error);
+      // Handle error appropriately (e.g., show error message)
+    }
+  };
 
   return (
     <form className="form">
@@ -24,28 +47,31 @@ export function CreateUserForm() {
           type="text"
           id="username"
           placeholder="Enter username"
-          onChange={logfunc}
+          value={username}
+          onChange={handleUsernameChange}
         />
       </div>
-      <div>
+      {/* <div>
         <label htmlFor="email">Email:</label>
         <input
           type="text"
           id="email"
           placeholder="Enter email"
-          onChange={logfunc}
+          value={email}
+          onChange={handleEmailChange}
         />
-      </div>
+      </div> */}
       <div>
         <label htmlFor="password">Password:</label>
         <input
           type="password"
           id="password"
           placeholder="Password"
-          onChange={logfunc}
+          value={password}
+          onChange={handlePasswordChange}
         />
       </div>
-      <button type="submit" onClick={logfunc}>
+      <button type="submit" onClick={handleSubmit}>
         Create
       </button>
     </form>
