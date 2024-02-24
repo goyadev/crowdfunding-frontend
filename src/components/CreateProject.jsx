@@ -1,7 +1,7 @@
 // import the CSS file and imports
 import { useState } from "react";
 import postProject from "../api/post-project";
-import { useNavigate } from "react-router-dom";
+import { UNSAFE_DataRouterStateContext, useNavigate } from "react-router-dom";
 
 // Things needed in form: "title": "Project three", "description", "goal","image":
 export function CreateProjectForm() {
@@ -10,6 +10,7 @@ export function CreateProjectForm() {
   const [description, setDescription] = useState("");
   const [goal, setGoal] = useState("");
   const [image, setImage] = useState("");
+  const [isOpen, setOpen] = useState("");
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -29,6 +30,11 @@ export function CreateProjectForm() {
   const handleImageChange = (event) => {
     setImage(event.target.value);
     console.log("Image test");
+  };
+
+  const handleIsOpen = (event) => {
+    setOpen(event.target.value);
+    console.log("Is open/closed for pledges test");
   };
 
   const handleSubmit = async (event) => {
@@ -88,6 +94,29 @@ export function CreateProjectForm() {
           placeholder="Enter Image URL"
           value={image}
           onChange={handleImageChange}
+        />
+      </div>
+      <p>Open for pledges:</p>
+      <div>
+        <label htmlFor="open">Yes:</label>
+        <input
+          type="radio"
+          name="is_open"
+          id="isOpen"
+          value={isOpen}
+          defaultChecked
+          onChange={handleIsOpen}
+        />
+      </div>
+
+      <div>
+        <label htmlFor="open">No:</label>
+        <input
+          type="radio"
+          name="is_open"
+          id="isClosed"
+          value={isOpen}
+          onChange={handleIsOpen}
         />
       </div>
       <button type="submit" onClick={handleSubmit}>
