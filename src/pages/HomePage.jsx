@@ -1,7 +1,7 @@
+// @ts-nocheck
 import useProjects from "../hooks/use-projects";
 import ProjectCard from "../components/ProjectCard";
 import "./HomePage.css";
-import { Head } from "../components/Head";
 import { Hero } from "../components/Hero";
 
 function HomePage() {
@@ -12,7 +12,6 @@ function HomePage() {
   if (error) return <h1>{error.message}</h1>;
   return (
     <>
-      <Head />
       <Hero />
       <div id="project-list">
         {projects.map((projectData, key) => {

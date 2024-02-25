@@ -1,7 +1,7 @@
 // import the CSS file and imports
 import { useState } from "react";
 import postProject from "../api/post-project";
-import { UNSAFE_DataRouterStateContext, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Things needed in form: "title": "Project three", "description", "goal","image":
 export function CreateProjectForm() {

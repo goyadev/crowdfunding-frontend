@@ -31,8 +31,9 @@ export function CreateUserForm() {
       // Call the createUser API function with the user data
       await createUser(username, password);
 
+      navigate("/");
       // Optionally, you can navigate to another page after successful user creation
-      navigate("/success");
+      // navigate("/success");
     } catch (error) {
       console.error("Error creating user:", error);
       // Handle error appropriately (e.g., show error message)

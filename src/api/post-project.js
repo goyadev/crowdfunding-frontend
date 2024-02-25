@@ -1,3 +1,4 @@
+// @ts-nocheck
 // create asyn function for postProject
 async function postProject(title, description, goal, image) {
   // const URL from .env

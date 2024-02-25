@@ -1,3 +1,9 @@
+body,
+#root {
+  margin: 0;
+  height: 100vh;
+}
+
 .navsection {
   display: flex;
   flex-direction: row;
@@ -5,11 +11,40 @@
   align-items: center;
 }
 
+.darkMode {
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+
+.lightMode {
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+
+.darkMode a {
+  color: white;
+  &:after {
+    background-color: white;
+  }
+}
+
+.lightMode a {
+  color: black;
+  &:after {
+    background-color: black;
+  }
+}
+
+.darkMode img {
+  filter: invert(1);
+}
+
 a {
   text-decoration: none;
   font-family: "Monserrat", sans-serif;
   font-size: 16px;
-  color: black;
   display: inline-block;
   position: relative;
   &:after {
@@ -21,7 +56,7 @@ a {
     height: 2px;
     margin: -5px 0;
     left: 0;
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
     transition: all 0.4s ease-in 0s;
   }
   &:hover:after {

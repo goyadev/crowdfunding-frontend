@@ -3,17 +3,17 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
-import NavBar from "./components/NavBar.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import AllProjectsPage from "./pages/AllProjectsPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import CreateUserPage from "./pages/CreateUserPage.jsx";
 import CreateProjectsPage from "./pages/CreateProjectPage.jsx";
+import App from "./components/App.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NavBar />,
+    element: <App />,
     children: [
       {
         path: "/",

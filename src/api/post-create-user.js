@@ -1,3 +1,4 @@
+// @ts-nocheck
 async function createUser(username, password) {
   const url = `${import.meta.env.VITE_API_URL}/create-users/`;
 
