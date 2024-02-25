@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import Toggle from "./Toggle";
 
 function NavBar() {
   return (
@@ -29,14 +30,8 @@ function NavBar() {
             </ul>
           </nav>
           <img src="/search.png" className="icon" id="search" alt="searchbar" />
-          <img
-            src={"/switch-dark.png"}
-            className="icon"
-            id="switchdark"
-            alt="dark mode toggle"
-            style={{ cursor: "pointer" }}
-          />
         </section>
+        <Toggle />
       </div>
     </>
   );
