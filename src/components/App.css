@@ -1,0 +1,38 @@
+/* root colours */
+
+h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 5px;
+}
+
+/* Dark mode */
+.dark-mode {
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode a {
+  color: white;
+  &:after {
+    background-color: white;
+  }
+}
+
+.light-mode a {
+  color: black;
+  &:after {
+    background-color: black;
+  }
+}
+
+.dark-mode img {
+  filter: invert(1);
+}

@@ -11,42 +11,13 @@ body,
   align-items: center;
 }
 
-.darkMode {
-  height: 100%;
-  background-color: black;
-  color: white;
-}
-
-.lightMode {
-  height: 100%;
-  background-color: white;
-  color: black;
-}
-
-.darkMode a {
-  color: white;
-  &:after {
-    background-color: white;
-  }
-}
-
-.lightMode a {
-  color: black;
-  &:after {
-    background-color: black;
-  }
-}
-
-.darkMode img {
-  filter: invert(1);
-}
-
 a {
   text-decoration: none;
   font-family: "Monserrat", sans-serif;
   font-size: 16px;
   display: inline-block;
   position: relative;
+  color: black;
   &:after {
     content: "";
     display: block;
