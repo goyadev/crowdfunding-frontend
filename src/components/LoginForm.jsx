@@ -16,18 +16,24 @@ function LoginForm() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (credentials.username && credentials.password) {
-      postLogin(credentials.username, credentials.password).then((response) => {
+      try {
+        const response = await postLogin(
+          credentials.username,
+          credentials.password
+        );
         window.localStorage.setItem("token", response.token);
         navigate("/");
-      });
+      } catch (err) {
+        window.alert(err.message);
+      }
     }
   };
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="username">Username:</label>
         <input
@@ -46,9 +52,7 @@ function LoginForm() {
           onChange={handleChange}
         />
       </div>
-      <button type="submit" onClick={handleSubmit}>
-        Login
-      </button>
+      <button type="submit">Login</button>
     </form>
   );
 }

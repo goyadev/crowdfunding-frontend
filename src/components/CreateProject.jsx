@@ -10,7 +10,9 @@ export function CreateProjectForm() {
   const [description, setDescription] = useState("");
   const [goal, setGoal] = useState("");
   const [image, setImage] = useState("");
-  const [isOpen, setOpen] = useState("");
+  const [isOpen, setOpen] = useState(true);
+  const [currentTime, setTime] = useState("");
+  // the last thing you were doing was trying to get a timestamp to send to the backend @4pm Tues 27 Feb
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -42,7 +44,7 @@ export function CreateProjectForm() {
 
     try {
       // Call the createUser API function with the user data
-      await postProject(title, description, goal, image);
+      await postProject(title, description, goal, image, isOpen);
 
       // Optionally, you can navigate to another page after successful user creation
       navigate("/success");
@@ -55,7 +57,7 @@ export function CreateProjectForm() {
   // The form
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="title">Title:</label>
         <input
@@ -98,30 +100,26 @@ export function CreateProjectForm() {
       </div>
       <p>Open for pledges:</p>
       <div>
-        <label htmlFor="open">Yes:</label>
+        <label htmlFor="isOpen">Yes:</label>
         <input
           type="radio"
           name="is_open"
           id="isOpen"
-          value={isOpen}
-          defaultChecked
+          value="true" // Value for "Yes" option
+          checked={true}
           onChange={handleIsOpen}
         />
-      </div>
 
-      <div>
-        <label htmlFor="open">No:</label>
+        <label htmlFor="isClosed">No:</label>
         <input
           type="radio"
           name="is_open"
           id="isClosed"
-          value={isOpen}
+          value="false" // Value for "No" option
           onChange={handleIsOpen}
         />
       </div>
-      <button type="submit" onClick={handleSubmit}>
-        Create Project
-      </button>
+      <button type="submit">Create Project</button>
     </form>
   );
 }

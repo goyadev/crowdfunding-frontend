@@ -1,6 +1,13 @@
 // @ts-nocheck
 // create asyn function for postProject
-async function postProject(title, description, goal, image) {
+async function postProject(
+  title,
+  description,
+  goal,
+  image,
+  isOpen,
+  currentTime
+) {
   // const URL from .env
   const url = `${import.meta.env.VITE_API_URL}/projects/`;
   // const reponse for URL with fetch, method is POST
@@ -18,6 +25,8 @@ async function postProject(title, description, goal, image) {
       description: description,
       goal: goal,
       image: image,
+      is_open: isOpen,
+      date_created: currentTime,
     }),
   });
   // what errors should we use
