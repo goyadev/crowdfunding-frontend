@@ -54,8 +54,8 @@ function NavBar() {
           </nav>
           <img src="/search.png" className="icon" id="search" alt="searchbar" />
         </section>
-        <Head />
         <Toggle />
+        <Head />
       </div>
     </>
   );
