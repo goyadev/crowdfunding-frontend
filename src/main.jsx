@@ -9,6 +9,8 @@ import LoginPage from "./pages/LoginPage.jsx";
 import CreateUserPage from "./pages/CreateUserPage.jsx";
 import CreateProjectsPage from "./pages/CreateProjectPage.jsx";
 import App from "./components/App.jsx";
+import Custom404 from "./pages/Custom404Page.jsx";
+import Success from "./pages/SuccessPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: "/create-project",
         element: <CreateProjectsPage />,
+      },
+      {
+        path: "/404",
+        element: <Custom404 />,
+      },
+      {
+        path: "/success",
+        element: <Success />,
       },
     ],
   },

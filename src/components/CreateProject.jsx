@@ -3,7 +3,6 @@ import { useState } from "react";
 import postProject from "../api/post-project";
 import { useNavigate } from "react-router-dom";
 
-// Things needed in form: "title": "Project three", "description", "goal","image":
 export function CreateProjectForm() {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -11,42 +10,48 @@ export function CreateProjectForm() {
   const [goal, setGoal] = useState("");
   const [image, setImage] = useState("");
   const [isOpen, setOpen] = useState(true);
-  const [currentTime, setTime] = useState("");
-  // the last thing you were doing was trying to get a timestamp to send to the backend @4pm Tues 27 Feb
+  const [currentTime, setCurrentTime] = useState("");
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
-    console.log("Title test");
+    console.log("title set");
   };
 
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
-    console.log("Description test");
+    console.log("description set");
   };
 
   const handleGoalChange = (event) => {
     setGoal(event.target.value);
-    console.log("Goal test");
+    console.log("goal set");
   };
 
   const handleImageChange = (event) => {
     setImage(event.target.value);
-    console.log("Image test");
+    console.log("image set");
   };
 
   const handleIsOpen = (event) => {
-    setOpen(event.target.value);
-    console.log("Is open/closed for pledges test");
+    setOpen(event.target.id === "isOpen");
+    console.log("is open or not set");
+  };
+
+  const getTimeAndSendToBackend = () => {
+    const now = new Date();
+    const isoString = now.toISOString();
+    setCurrentTime(isoString); // Set current time here
+    console.log("time set");
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      // Call the createUser API function with the user data
-      await postProject(title, description, goal, image, isOpen);
+      // Call the postProject API function with the project data
+      await postProject(title, description, goal, image, isOpen, currentTime);
 
-      // Optionally, you can navigate to another page after successful user creation
+      // Optionally, you can navigate to another page after successful project creation
       navigate("/success");
     } catch (error) {
       console.error("Error posting project:", error);
@@ -119,7 +124,9 @@ export function CreateProjectForm() {
           onChange={handleIsOpen}
         />
       </div>
-      <button type="submit">Create Project</button>
+      <button type="submit" onClick={getTimeAndSendToBackend}>
+        Create Project
+      </button>
     </form>
   );
 }

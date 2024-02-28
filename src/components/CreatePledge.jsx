@@ -24,10 +24,10 @@ export function CreatePledgeForm() {
       // Call the createUser API function with the user data
       await postPledge(amount, comment);
 
-      // Optionally, you can navigate to another page after successful user creation
+      // Optionally, you can navigate to another page after successful pledge
       navigate("/success");
     } catch (error) {
-      console.error("Error posting project:", error);
+      console.error("Error posting pledge:", error);
       // Handle error appropriately (e.g., show error message)
     }
   };

@@ -31,7 +31,7 @@ export function CreateUserForm() {
       // Call the createUser API function with the user data
       await createUser(username, password);
 
-      navigate("/");
+      navigate("/success");
       // Optionally, you can navigate to another page after successful user creation
       // navigate("/success");
     } catch (error) {
