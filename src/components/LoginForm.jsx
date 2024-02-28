@@ -1,9 +1,12 @@
 import { useState } from "react";
 import postLogin from "../api/post-login.js";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/use-auth.js";
 
 function LoginForm() {
   const navigate = useNavigate();
+  const { auth, setAuth } = useAuth();
+
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -25,6 +28,9 @@ function LoginForm() {
           credentials.password
         );
         window.localStorage.setItem("token", response.token);
+        setAuth({
+          token: response.token,
+        });
         navigate("/");
       } catch (err) {
         window.alert(err.message);

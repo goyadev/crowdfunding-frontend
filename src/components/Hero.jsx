@@ -1,5 +1,3 @@
-import "./Hero.css";
-
 export function Hero() {
   return (
     <>
@@ -14,3 +12,4 @@ export function Hero() {
     </>
   );
 }
+export default Hero;

@@ -11,6 +11,7 @@ import CreateProjectsPage from "./pages/CreateProjectPage.jsx";
 import App from "./components/App.jsx";
 import Custom404 from "./pages/Custom404Page.jsx";
 import Success from "./pages/SuccessPage.jsx";
+import { AuthProvider } from "./components/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -56,7 +57,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* Here we wrap our app in the router provider so they render */}
-    <RouterProvider router={router} />
+    <AuthProvider>
+      {/* Here we wrap our app in the router provider so they render */}
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

@@ -2,7 +2,7 @@
 import useProjects from "../hooks/use-projects";
 import ProjectCard from "../components/ProjectCard";
 import "./HomePage.css";
-import { Hero } from "../components/Hero";
+import Hero from "../components/Hero";
 
 function HomePage() {
   const { projects, isLoading, error } = useProjects();

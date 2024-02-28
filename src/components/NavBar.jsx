@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import Toggle from "./Toggle";
+import { Head } from "./Head";
+import { useAuth } from "../hooks/use-auth.js";
 
 function NavBar() {
+  const { auth, setAuth } = useAuth();
+  const handleLogout = () => {
+    window.localStorage.removeItem("token");
+    setAuth({ token: null });
+  };
+
+  console.log(auth);
   return (
     <>
       <div>
@@ -19,18 +28,33 @@ function NavBar() {
                 <Link to="/contact">CONTACT</Link>
               </li>
               <li>
-                <Link to="/login">LOGIN</Link>
+                {auth.token ? (
+                  <Link to="/" onClick={handleLogout}>
+                    LOG OUT
+                  </Link>
+                ) : (
+                  <Link to="/login">LOGIN</Link>
+                )}
               </li>
               <li>
-                <Link to="/create-account">CREATE ACCOUNT</Link>
+                {auth.token ? (
+                  <Link to="/create-project">CREATE PROJECT</Link>
+                ) : (
+                  <Link to="/"></Link>
+                )}
               </li>
               <li>
-                <Link to="/create-project">CREATE PROJECT</Link>
+                {auth.token ? (
+                  <Link to="/"></Link>
+                ) : (
+                  <Link to="/create-account">CREATE ACCOUNT</Link>
+                )}
               </li>
             </ul>
           </nav>
           <img src="/search.png" className="icon" id="search" alt="searchbar" />
         </section>
+        <Head />
         <Toggle />
       </div>
     </>
