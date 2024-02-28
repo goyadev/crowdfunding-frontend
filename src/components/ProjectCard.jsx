@@ -1,6 +1,7 @@
 // @ts-nocheck
 import { Link } from "react-router-dom";
 import "./ProjectCard.css";
+import CreatePledgeForm from "./CreatePledge";
 
 function ProjectCard(props) {
   const { projectData } = props;
@@ -12,6 +13,7 @@ function ProjectCard(props) {
         {/* <img src={projectData.image} /> */}
         <h3>{projectData.title}</h3>
       </Link>
+      <CreatePledgeForm />
     </div>
   );
 }

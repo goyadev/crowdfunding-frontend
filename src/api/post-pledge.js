@@ -1,5 +1,5 @@
 // @ts-nocheck
-async function postPledge(amount, comment) {
+async function postPledge(amount, comment, anonymous, project) {
   const url = `${import.meta.env.VITE_API_URL}/pledges/`;
 
   const response = await fetch(url, {
@@ -8,10 +8,13 @@ async function postPledge(amount, comment) {
     // Tell server we are sending JSON data
     headers: {
       "Content-Type": "application/json",
+      authorization: `Token ${window.localStorage.getItem("token")}`,
     },
     body: JSON.stringify({
       amount: amount,
       comment: comment,
+      anonymous: anonymous,
+      project: project,
       // id: someWayToFeedinProjectID,
     }),
   });
