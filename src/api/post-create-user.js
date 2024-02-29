@@ -1,5 +1,5 @@
 // @ts-nocheck
-async function createUser(username, password) {
+async function createUser(username, password, email) {
   const url = `${import.meta.env.VITE_API_URL}/create-users/`;
 
   try {
@@ -11,6 +11,7 @@ async function createUser(username, password) {
       body: JSON.stringify({
         username: username,
         password: password,
+        email: email,
       }),
     });
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // @ts-nocheck
 import { Link } from "react-router-dom";
 import "./ProjectCard.css";
@@ -5,7 +6,7 @@ import CreatePledgeForm from "./CreatePledge";
 
 function ProjectCard(props) {
   const { projectData } = props;
-  const projectLink = `project/${projectData.id}`;
+  // const projectLink = `project/${projectData.id}`;
 
   return (
     <div className="project-card">

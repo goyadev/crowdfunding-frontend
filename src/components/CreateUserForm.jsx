@@ -6,18 +6,19 @@ export function CreateUserForm() {
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // note: would be good to add some email validation
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
     console.log("Username test");
   };
 
-  // const handleEmailChange = (event) => {
-  //   setEmail(event.target.value);
-  //   console.log("Email test");
-  // };
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+    console.log("Email test");
+  };
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
@@ -29,7 +30,7 @@ export function CreateUserForm() {
 
     try {
       // Call the createUser API function with the user data
-      await createUser(username, password);
+      await createUser(username, password, email);
 
       navigate("/success");
       // Optionally, you can navigate to another page after successful user creation
@@ -52,7 +53,7 @@ export function CreateUserForm() {
           onChange={handleUsernameChange}
         />
       </div>
-      {/* <div>
+      <div>
         <label htmlFor="email">Email:</label>
         <input
           type="text"
@@ -61,7 +62,7 @@ export function CreateUserForm() {
           value={email}
           onChange={handleEmailChange}
         />
-      </div> */}
+      </div>
       <div>
         <label htmlFor="password">Password:</label>
         <input

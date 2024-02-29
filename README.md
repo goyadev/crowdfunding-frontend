@@ -14,13 +14,13 @@ Goya Zheng
 
 [x] Have a clear target audience.
 
-[ ] Have user accounts. A user should have at least the following attributes:
+[x] Have user accounts. A user should have at least the following attributes:
 
-[ ] Username
+[x] Username
 
-[ ] Email address
+[x] Email address
 
-[ ] Password
+[x] Password
 
 [x] Ability to create a “project” to be crowdfunded which will include at least thefollowing attributes:
 
@@ -50,13 +50,13 @@ Goya Zheng
 
 [x] A comment to go along with the pledge
 
-[ ] Implement suitable update/delete functionality, e.g. should a project owner beallowed to update a project description?
+[ ] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
 
 [ ] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 
-[ ] Return the relevant status codes for both successful and unsuccessful requeststo the API.
+[x] Return the relevant status codes for both successful and unsuccessful requests to the API.
 
-[ ] Handle failed requests gracefully (e.g. you should have a custom 404 pagerather than the default error page).
+[ ] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
 
 [ ] A screenshot of the homepage
 
