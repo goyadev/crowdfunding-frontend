@@ -58,6 +58,10 @@ Goya Zheng
 
 [ ] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
 
+[x] Use Token Authentication
+
+[ ] Implement responsive design
+
 [ ] A screenshot of the homepage
 
 [ ] A screenshot of the project creation page

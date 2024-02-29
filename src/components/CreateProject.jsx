@@ -2,6 +2,7 @@
 import { useState } from "react";
 import postProject from "../api/post-project";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/use-auth.js";
 
 export function CreateProjectForm() {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ export function CreateProjectForm() {
   const [image, setImage] = useState("");
   const [isOpen, setOpen] = useState(true);
   const [currentTime, setCurrentTime] = useState("");
+  const { auth, setAuth } = useAuth();
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -58,6 +60,13 @@ export function CreateProjectForm() {
       // Handle error appropriately (e.g., show error message)
     }
   };
+
+  if (auth.token === null)
+    return (
+      <div>
+        <h3>{"you're not logged in"}</h3>
+      </div>
+    );
 
   // The form
 
