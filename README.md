@@ -8,11 +8,11 @@ Goya Zheng
 
 ### Deployed Project Link
 
-[ ] Be separated into two distinct projects: an API built using the Django RestFramework and a website built using React.
+[x] Be separated into two distinct projects: an API built using the Django RestFramework and a website built using React.
 
-[ ] Have a cool name, bonus points if it includes a pun and/or missing vowels. Seehttps://namelix.com/ for inspiration. (Bonus Points are meaningless)
+[x] Have a cool name, bonus points if it includes a pun and/or missing vowels. Seehttps://namelix.com/ for inspiration. (Bonus Points are meaningless)
 
-[ ] Have a clear target audience.
+[x] Have a clear target audience.
 
 [ ] Have user accounts. A user should have at least the following attributes:
 
@@ -22,33 +22,33 @@ Goya Zheng
 
 [ ] Password
 
-[ ] Ability to create a “project” to be crowdfunded which will include at least thefollowing attributes:
+[x] Ability to create a “project” to be crowdfunded which will include at least thefollowing attributes:
 
-[ ] Title
+[x] Title
 
-[ ] Owner (a user)
+[x] Owner (a user)
 
-[ ] Description
+[x] Description
 
-[ ] Image
+[x] Image
 
-[ ] Target amount to fundraise
+[x] Target amount to fundraise
 
-[ ] Whether it is currently open to accepting new supporters or not
+[x] Whether it is currently open to accepting new supporters or not
 
-[ ] When the project was created
+[x] When the project was created
 
-[ ] Ability to “pledge” to a project. A pledge should include at least the followingattributes:
+[x] Ability to “pledge” to a project. A pledge should include at least the followingattributes:
 
-[ ] An amount
+[x] An amount
 
-[ ] The project the pledge is for
+[] The project the pledge is for
 
 [ ] The supporter/user (i.e. who created the pledge)
 
-[ ] Whether the pledge is anonymous or not
+[x] Whether the pledge is anonymous or not
 
-[ ] A comment to go along with the pledge
+[x] A comment to go along with the pledge
 
 [ ] Implement suitable update/delete functionality, e.g. should a project owner beallowed to update a project description?
 

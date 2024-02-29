@@ -13,7 +13,7 @@ function ProjectCard(props) {
         {/* <img src={projectData.image} /> */}
         <h3>{projectData.title}</h3>
       </Link>
-      <CreatePledgeForm />
+      <CreatePledgeForm projectId={projectData.id} />
     </div>
   );
 }

@@ -2,12 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import postPledge from "../api/post-pledge";
 
-export function CreatePledgeForm() {
+export function CreatePledgeForm(props) {
   const navigate = useNavigate();
   const [amount, setAmount] = useState("");
   const [comment, setComment] = useState("");
-  const [anonymous, setAnon] = useState(false);
-  const [project, setProject] = useState("");
+  const [anonymous, setAnon] = useState("false");
 
   const handleAmountChange = (event) => {
     setAmount(event.target.value);
@@ -29,7 +28,7 @@ export function CreatePledgeForm() {
 
     try {
       // Call the createUser API function with the user data
-      await postPledge(amount, comment, anonymous, project);
+      await postPledge(amount, comment, anonymous, props.projectId);
 
       // Optionally, you can navigate to another page after successful pledge
       navigate("/success");
@@ -70,7 +69,8 @@ export function CreatePledgeForm() {
         <input
           type="radio"
           name="is_anon"
-          id="isAnon"
+          id="inAnon"
+          checked={anonymous === "true"}
           value="true" // Value for "Yes" option
           onChange={handleAnonChange}
         />
@@ -81,7 +81,7 @@ export function CreatePledgeForm() {
           name="is_anon"
           id="isNamed"
           value="false" // Value for "No" option
-          checked={true}
+          checked={anonymous === "false"}
           onChange={handleAnonChange}
         />
       </div>
