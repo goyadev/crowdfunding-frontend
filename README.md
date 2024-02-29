@@ -42,7 +42,7 @@ Goya Zheng
 
 [x] An amount
 
-[] The project the pledge is for
+[x] The project the pledge is for
 
 [ ] The supporter/user (i.e. who created the pledge)
 

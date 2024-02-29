@@ -1,20 +1,17 @@
 // @ts-nocheck
 import { Link } from "react-router-dom";
 import "./ProjectCard.css";
-import CreatePledgeForm from "./CreatePledge";
 
-function ProjectCard(props) {
+function ProjectList(props) {
   const { projectData } = props;
   const projectLink = `project/${projectData.id}`;
 
   return (
-    <div className="project-card">
+    <div className="project-list">
       <Link to={`/project/${projectData.id}`}>
-        <img src={projectData.image} />
         <h3>{projectData.title}</h3>
       </Link>
-      <CreatePledgeForm projectId={projectData.id} />
     </div>
   );
 }
-export default ProjectCard;
+export default ProjectList;
