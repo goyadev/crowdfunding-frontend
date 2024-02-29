@@ -65,6 +65,7 @@ export function CreateProjectForm() {
     return (
       <div>
         <h3>{"you're not logged in"}</h3>
+        <h3>ヽ(°〇°)ﾉ</h3>
       </div>
     );
 

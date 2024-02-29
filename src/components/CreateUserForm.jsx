@@ -6,9 +6,11 @@ export function CreateUserForm() {
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
+  // future, would be good to investigate username validation eg. this username is taken
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // note: would be good to add some email validation
+  const [first, setFirstName] = useState("");
+  const [last, setLastName] = useState("");
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -25,12 +27,22 @@ export function CreateUserForm() {
     console.log("Password test");
   };
 
+  const handleFirstName = (event) => {
+    setFirstName(event.target.value);
+    console.log("First name test");
+  };
+
+  const handleLastName = (event) => {
+    setLastName(event.target.value);
+    console.log("Last name test");
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       // Call the createUser API function with the user data
-      await createUser(username, password, email);
+      await createUser(username, password, email, first, last);
 
       navigate("/success");
       // Optionally, you can navigate to another page after successful user creation
@@ -51,6 +63,26 @@ export function CreateUserForm() {
           placeholder="Enter username"
           value={username}
           onChange={handleUsernameChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="firstname">First name:</label>
+        <input
+          type="text"
+          id="firstname"
+          placeholder="Enter your first name"
+          value={first}
+          onChange={handleFirstName}
+        />
+      </div>
+      <div>
+        <label htmlFor="lastname">Last Name:</label>
+        <input
+          type="text"
+          id="lastname"
+          placeholder="Enter last name"
+          value={last}
+          onChange={handleLastName}
         />
       </div>
       <div>
