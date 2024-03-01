@@ -1,56 +1,78 @@
-.toggle {
-  margin: 10px;
+/* Toggle Switch */
+
+.theme-switch-wrapper {
   display: flex;
   align-items: center;
-  justify-content: end;
-  background: #ffffff;
-  color: #000000;
-}
-
-.toggle > section {
-  flex: 0 0 120px;
   text-align: center;
+  width: 160px;
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
 }
 
-.switch {
+.description {
+  margin-left: 1.25rem;
+}
+
+.theme-switch {
   display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
 }
 
-.switch input {
+.theme-switch input {
   display: none;
 }
 
-.switch label {
-  display: block;
-  width: 60px;
-  height: 20px;
-  padding: 3px;
-  border-radius: 30px;
-  border: 2px solid #000000;
+.slider {
+  background-color: #ccc;
+  bottom: 0;
   cursor: pointer;
-  transition: 0.3s;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
 }
 
-.switch label::after {
+.slider:before {
+  background-color: #fff;
+  bottom: 0.25rem;
   content: "";
-  display: inherit;
-  width: 20px;
-  height: 20px;
-  border-radius: 12px;
-  background: #000000;
-  transition: 0.3s;
+  width: 26px;
+  height: 26px;
+  left: 0.25rem;
+  position: absolute;
+  transition: 0.4s;
 }
 
-.switch input:checked ~ label {
-  border-color: #000000;
+input:checked + .slider {
+  background-color: var(--button-color);
 }
 
-.switch input:checked ~ label::after {
-  translate: 30px 0;
-  background: #000000;
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
-.switch input:disabled ~ label {
-  opacity: 0.5;
-  cursor: not-allowed;
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#error,
+#success-msg {
+  width: 40vw;
+  margin: 0.125rem 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-family: "Jost";
+  color: var(--secondary-color);
+}
+
+#success-msg {
+  transition-delay: 3s;
 }

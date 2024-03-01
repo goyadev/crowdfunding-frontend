@@ -1,22 +1,36 @@
-import "./Toggle.css";
-import { useState } from "react";
+import { useEffect } from "react";
 import "../components/App.css";
 
 function Toggle() {
-  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    const toggleSwitch = document.querySelector(
+      '.theme-switch input[type="checkbox"]'
+    );
 
-  const changeTheme = () => {
-    setDarkMode(!darkMode);
-    console.log("theme change triggered");
-  };
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    }
+
+    toggleSwitch.addEventListener("change", switchTheme, false);
+
+    return () => {
+      toggleSwitch.removeEventListener("change", switchTheme);
+    };
+  }, []);
 
   return (
-    <div className={`toggle ${darkMode ? "dark-mode" : ""}`} id="modetoggle">
-      <span className="switch">
-        <input id="switch-rounded" type="checkbox" onClick={changeTheme} />
-        <label htmlFor="switch-rounded"></label>
-      </span>
+    <div className="theme-switch-wrapper">
+      <label className="theme-switch" htmlFor="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div className="slider round"></div>
+      </label>
+      <div className="description">Dark Mode</div>
     </div>
   );
 }
+
 export default Toggle;
