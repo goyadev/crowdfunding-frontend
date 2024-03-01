@@ -1,38 +1,22 @@
 /* root colours */
+:root {
+  --primary-color: #010712;
+  --secondary-color: #818386;
+  --bg-color: #fcfdfd;
+  --button-color: #3b3636;
+  --h1-color: #3f444c;
+}
+
+[data-theme="dark"] {
+  --primary-color: #fcfdfd;
+  --secondary-color: #e2e4e7;
+  --bg-color: #010712;
+  --button-color: #e2e4e7;
+  --h1-color: #fcfdfd;
+}
 
 h3 {
   text-transform: uppercase;
   font-weight: normal;
   margin: 5px;
-}
-
-/* Dark mode */
-.dark-mode {
-  height: 100%;
-  background-color: black;
-  color: white;
-}
-
-.light-mode {
-  height: 100%;
-  background-color: white;
-  color: black;
-}
-
-.dark-mode a {
-  color: white;
-  &:after {
-    background-color: white;
-  }
-}
-
-.light-mode a {
-  color: black;
-  &:after {
-    background-color: black;
-  }
-}
-
-.dark-mode img {
-  filter: invert(1);
 }

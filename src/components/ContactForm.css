@@ -1,18 +1,4 @@
-:root {
-  --primary-color: #010712;
-  --secondary-color: #818386;
-  --bg-color: #fcfdfd;
-  --button-color: #3b3636;
-  --h1-color: #3f444c;
-}
-
-[data-theme="dark"] {
-  --primary-color: #fcfdfd;
-  --secondary-color: #818386;
-  --bg-color: #010712;
-  --button-color: #818386;
-  --h1-color: #fcfdfd;
-}
+/* root colours used to be here and worked */
 
 * {
   margin: 0;
@@ -142,85 +128,6 @@ button:hover {
 
 button:active {
   opacity: 0.8;
-}
-
-/* Toggle Switch */
-
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 160px;
-  position: absolute;
-  top: 0.5rem;
-  right: 0;
-}
-
-.description {
-  margin-left: 1.25rem;
-}
-
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
-}
-
-.theme-switch input {
-  display: none;
-}
-
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.4s;
-}
-
-.slider:before {
-  background-color: #fff;
-  bottom: 0.25rem;
-  content: "";
-  width: 26px;
-  height: 26px;
-  left: 0.25rem;
-  position: absolute;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: var(--button-color);
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-#error,
-#success-msg {
-  width: 40vw;
-  margin: 0.125rem 0;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  font-family: "Jost";
-  color: var(--secondary-color);
-}
-
-#success-msg {
-  transition-delay: 3s;
 }
 
 @media only screen and (max-width: 950px) {

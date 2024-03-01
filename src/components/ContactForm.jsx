@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { useState } from "react";
-
+import "./App.css";
 import "./ContactForm.css";
 
 export function ContactForm() {
