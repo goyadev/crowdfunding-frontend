@@ -17,7 +17,11 @@ function ProjectCard(props) {
         <h3>{projectData.title}</h3>
         <h4>Started: {formattedDate}</h4>
         <h4>Created by: {projectData.owner}</h4>
-        <h4>{projectData.description}</h4>
+        <h4>
+          About the project: <br />
+        </h4>
+        <p>{projectData.description}</p>
+
         <h4>Project Goal: {projectData.goal}</h4>
       </Link>
       <CreatePledgeForm projectId={projectData.id} />

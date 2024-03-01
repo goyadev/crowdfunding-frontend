@@ -10,7 +10,7 @@ export function AllProjectsPage() {
   if (error) return <h1>{error.message}</h1>;
   return (
     <>
-      <h1>I am the PROJECTS page</h1>
+      <h1>ALL PROJECTS</h1>
       <div id="project-list">
         {projects.map((projectData, key) => {
           return <ProjectCard key={key} projectData={projectData} />;

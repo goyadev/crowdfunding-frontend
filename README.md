@@ -4,9 +4,14 @@ Goya Zheng
 
 # Artstarter: crowdfunding for creatives
 
+![Artstarter, crowdfunding for creatives](public/ARTSTARTER-header.png)
+A platform for making the making easy. Spend more time creating and less time writing grant applications. A simple way to crowdfund for your next creative project. From music, to art, photography and all artistic outlets in between.
+
 ## Project requirements
 
 ### Deployed Project Link
+
+https://artstarter.netlify.app/
 
 [x] Be separated into two distinct projects: an API built using the Django RestFramework and a website built using React.
 
