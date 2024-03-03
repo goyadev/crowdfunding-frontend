@@ -12,6 +12,7 @@ import App from "./components/App.jsx";
 import Custom404 from "./pages/Custom404Page.jsx";
 import Success from "./pages/SuccessPage.jsx";
 import { AuthProvider } from "./components/AuthProvider.jsx";
+import Toggle from "./components/Toggle.jsx";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       {/* Here we wrap our app in the router provider so they render */}
+      <Toggle />
       <RouterProvider router={router} />
     </AuthProvider>
   </React.StrictMode>

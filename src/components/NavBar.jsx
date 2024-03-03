@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import Toggle from "./Toggle";
 import { Head } from "./Head";
 import { useAuth } from "../hooks/use-auth.js";
 
@@ -54,7 +53,7 @@ function NavBar() {
           </nav>
           <img src="/search.png" className="icon" id="search" alt="searchbar" />
         </section>
-        <Toggle />
+
         <Head />
       </div>
     </>

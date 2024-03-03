@@ -1,4 +1,4 @@
-/* root colours */
+/* root colours moved from ContactForm.css */
 :root {
   --primary-color: #010712;
   --secondary-color: #818386;
@@ -15,8 +15,23 @@
   --h1-color: #fcfdfd;
 }
 
+[data-theme="dark"] #artstarterimage {
+  filter: invert(1);
+}
+
 h3 {
   text-transform: uppercase;
   font-weight: normal;
   margin: 5px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-color);
+}
+
+body {
+  background-color: var(--bg-color);
 }

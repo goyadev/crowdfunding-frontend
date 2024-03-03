@@ -21,11 +21,6 @@
   background-repeat: no-repeat;
 }
 
-.logo {
-  width: 10rem;
-  padding: 1.5rem;
-}
-
 .right-col {
   background: var(--bg-color);
   width: 50vw;
