@@ -50,7 +50,8 @@ export function ContactForm() {
   return (
     <div className="contact-container">
       <div className="left-col">
-        <video src=".//public/contactVid.mp4" autoPlay loop muted></video>
+        <contactVid />
+        {/* <video src=".//public/contactVid.mp4" autoPlay loop muted></video> */}
         {/* Video by Leeloo The First: https://www.pexels.com/video/a-person-touches-a-flower-in-a-glass-6945214/*/}
       </div>
       <div className="right-col">
