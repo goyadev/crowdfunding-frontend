@@ -6,24 +6,32 @@
   transition: all 0.3s ease-in-out;
 }
 
+.page-heading {
+  margin-bottom: 2.5rem;
+}
+
 .contact-container {
   display: flex;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   background: var(--bg-color);
 }
 
 .left-col {
-  width: 45vw;
+  /* width: 45vw; */
   height: 100%;
 
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.video {
+  width: 100%;
+}
+
 .right-col {
   background: var(--bg-color);
-  width: 50vw;
+  /* width: 50vw; */
   height: 100vh;
   padding: 5rem 3.5rem;
 }
@@ -49,7 +57,7 @@ p {
   color: var(--secondary-color);
   font-size: 0.9rem;
   letter-spacing: 0.01rem;
-  width: 40vw;
+  /* width: 40vw; */
   margin: 0.25rem 0;
 }
 
@@ -70,7 +78,7 @@ form {
 #contact-form input,
 textarea,
 label {
-  width: 40vw;
+  width: 80%;
   display: block;
 }
 
@@ -176,5 +184,14 @@ button:active {
 
   .slider.round:before {
     border-radius: 50%;
+  }
+  .video {
+    display: none;
+  }
+  /* .contact-container {
+    justify-content: center;
+  } */
+  .right-col {
+    padding: 3rem 2rem;
   }
 }

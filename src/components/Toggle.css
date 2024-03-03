@@ -65,7 +65,7 @@ input:checked + .slider:before {
 
 #error,
 #success-msg {
-  width: 40vw;
+  /* width: 40vw; */
   margin: 0.125rem 0;
   font-size: 0.75rem;
   text-transform: uppercase;

@@ -47,54 +47,62 @@ export function ContactForm() {
   };
 
   return (
-    <div className="contact-container">
-      <div className="left-col">
-        <video src="/contactVid.mp4" autoPlay loop muted></video>
-        {/* Video by Leeloo The First: https://www.pexels.com/video/a-person-touches-a-flower-in-a-glass-6945214/*/}
-      </div>
-      <div className="right-col">
-        <h1>Contact us</h1>
-        <p>Text about Artstarter contact</p>
+    <>
+      <h1 className="page-heading">Contact us</h1>
+      <div className="contact-container">
+        <div className="left-col">
+          <video
+            src="/contactVid.mp4"
+            autoPlay
+            loop
+            muted
+            className="video"
+          ></video>
+          {/* Video by Leeloo The First: https://www.pexels.com/video/a-person-touches-a-flower-in-a-glass-6945214/*/}
+        </div>
+        <div className="right-col">
+          <p>Text about Artstarter contact</p>
 
-        <form id="contact-form" onSubmit={validate}>
-          <label htmlFor="name">Full name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your Full Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <label htmlFor="email">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your Email Address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <label htmlFor="message">Message</label>
-          <textarea
-            rows="6"
-            placeholder="Your Message"
-            id="message"
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          ></textarea>
-          <button type="submit" name="submit">
-            Send
-          </button>
-        </form>
-        <div id="error">{error}</div>
-        <div id="success-msg">{successMsg}</div>
+          <form id="contact-form" onSubmit={validate}>
+            <label htmlFor="name">Full name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Full Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <label htmlFor="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <label htmlFor="message">Message</label>
+            <textarea
+              rows="6"
+              placeholder="Your Message"
+              id="message"
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            ></textarea>
+            <button type="submit" name="submit">
+              Send
+            </button>
+          </form>
+          <div id="error">{error}</div>
+          <div id="success-msg">{successMsg}</div>
+        </div>
       </div>
-    </div>
+    </>
     /* contact form based off of Diana L https://codepen.io/dianalisova/pen/eYJGgKq */
   );
 }
