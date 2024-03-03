@@ -63,7 +63,7 @@ export function ContactForm() {
         <div className="right-col">
           <p>Text about Artstarter contact</p>
 
-          <form id="contact-form" onSubmit={validate}>
+          <form className="form" id="contact-form" onSubmit={validate}>
             <label htmlFor="name">Full name</label>
             <input
               type="text"

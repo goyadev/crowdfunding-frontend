@@ -16,8 +16,14 @@
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (min-width: 360px) and (max-width: 480px) {
   .headerimage {
     max-width: 360px;
+  }
+}
+
+@media all and (min-width: 280px) and (max-width: 360px) {
+  .headerimage {
+    max-width: 280px;
   }
 }

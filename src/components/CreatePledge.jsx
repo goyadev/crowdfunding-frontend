@@ -42,7 +42,7 @@ export function CreatePledgeForm(props) {
   // The form
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="form" id="pledge-form" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="amount">Amount:</label>
         <input
