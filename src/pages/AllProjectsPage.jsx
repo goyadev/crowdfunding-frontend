@@ -1,6 +1,7 @@
 // @ts-nocheck
 import ProjectCard from "../components/ProjectCard";
 import useProjects from "../hooks/use-projects";
+import "./AllProjectsPage.css";
 
 export function AllProjectsPage() {
   const { projects, isLoading, error } = useProjects();
@@ -10,7 +11,7 @@ export function AllProjectsPage() {
   if (error) return <h1>{error.message}</h1>;
   return (
     <>
-      <h1>ALL PROJECTS</h1>
+      <h1>PROJECTS</h1>
       <div id="project-list">
         {projects.map((projectData, key) => {
           return <ProjectCard key={key} projectData={projectData} />;

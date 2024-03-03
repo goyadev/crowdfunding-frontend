@@ -13,7 +13,7 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <div id="project-list">
+      <div id="project-list-home">
         {projects.map((projectData, key) => {
           return <ProjectList key={key} projectData={projectData} />;
         })}
