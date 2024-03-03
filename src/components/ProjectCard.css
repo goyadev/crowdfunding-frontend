@@ -32,3 +32,10 @@ a {
     width: 100%;
   }
 }
+
+.projectcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

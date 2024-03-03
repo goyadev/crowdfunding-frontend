@@ -13,6 +13,8 @@ A platform for making the making easy. Spend more time creating and less time wr
 
 https://artstarter.netlify.app/
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b2dfb624-848c-40d5-b3bb-79d87ad19fb8/deploy-status)](https://app.netlify.com/sites/artstarter/deploys)
+
 [x] Be separated into two distinct projects: an API built using the Django RestFramework and a website built using React.
 
 [x] Have a cool name, bonus points if it includes a pun and/or missing vowels. Seehttps://namelix.com/ for inspiration. (Bonus Points are meaningless)

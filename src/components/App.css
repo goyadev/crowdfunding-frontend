@@ -10,12 +10,15 @@
 [data-theme="dark"] {
   --primary-color: #fcfdfd;
   --secondary-color: #e2e4e7;
-  --bg-color: #010712;
+  --bg-color: #000102;
   --button-color: #e2e4e7;
   --h1-color: #fcfdfd;
 }
 
 [data-theme="dark"] #artstarterimage {
+  filter: invert(1);
+}
+[data-theme="dark"] .icon {
   filter: invert(1);
 }
 

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "./App.css";
 import "./ContactForm.css";
+import contactVid from "/contactVid.mp4";
 
 export function ContactForm() {
   const [name, setName] = useState("");
