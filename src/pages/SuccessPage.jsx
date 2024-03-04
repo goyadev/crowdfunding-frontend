@@ -1,7 +1,7 @@
 export function Success() {
   return (
     <>
-      <h1>I am the happy success page. </h1>
+      <h1>created</h1>
       <h2>You did something, and it worked!</h2>
       <h2>\(★ω★)/</h2>
       <p>

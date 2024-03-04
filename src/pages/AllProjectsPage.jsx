@@ -12,11 +12,11 @@ export function AllProjectsPage() {
   return (
     <>
       <h1>PROJECTS</h1>
-      <div id="project-list">
+      <section id="project-list">
         {projects.map((projectData, key) => {
           return <ProjectCard key={key} projectData={projectData} />;
         })}
-      </div>
+      </section>
     </>
   );
 }

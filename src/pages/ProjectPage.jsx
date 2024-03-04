@@ -15,7 +15,7 @@ function ProjectPage() {
   const isOpenStatus = project.is_open;
 
   return (
-    <div>
+    <>
       <h2>{project.title}</h2>
       <h3>Created at: {formattedDate}</h3>
       <h3>{isOpenStatus ? "Project Open" : "Project Closed"}</h3>
@@ -30,7 +30,7 @@ function ProjectPage() {
         })}
       </ul>
       <CreatePledgeForm projectId={id} />
-    </div>
+    </>
   );
 }
 

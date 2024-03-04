@@ -1,9 +1,10 @@
 import { CreateUserForm } from "../components/CreateUserForm";
+import "./MiscFormsPage.css";
 
 function CreateUserPage() {
   return (
     <>
-      <h3>This is the create an account page</h3>
+      <h1>create account</h1>
       <CreateUserForm />
     </>
   );

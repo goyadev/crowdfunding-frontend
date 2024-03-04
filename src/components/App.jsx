@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar";
 import "./App.css";
 import { useEffect } from "react";
+import { Footer } from "./Footer";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
     <>
       <NavBar />
       <Outlet />
+      <Footer />
     </>
   );
 }

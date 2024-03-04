@@ -1,9 +1,10 @@
 import { CreateProjectForm } from "../components/CreateProject";
+import "./MiscFormsPage.css";
 
 export function CreateProjectsPage() {
   return (
     <>
-      <h1>I am the CREATE PROJECTS page</h1>
+      <h1>create project</h1>
       <CreateProjectForm />
     </>
   );

@@ -55,7 +55,7 @@ export function CreateUserForm() {
 
   return (
     <form className="form">
-      <div>
+      <section>
         <label htmlFor="username">Username:</label>
         <input
           type="text"
@@ -64,8 +64,8 @@ export function CreateUserForm() {
           value={username}
           onChange={handleUsernameChange}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <label htmlFor="firstname">First name:</label>
         <input
           type="text"
@@ -74,8 +74,8 @@ export function CreateUserForm() {
           value={first}
           onChange={handleFirstName}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <label htmlFor="lastname">Last Name:</label>
         <input
           type="text"
@@ -84,8 +84,8 @@ export function CreateUserForm() {
           value={last}
           onChange={handleLastName}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <label htmlFor="email">Email:</label>
         <input
           type="text"
@@ -94,8 +94,8 @@ export function CreateUserForm() {
           value={email}
           onChange={handleEmailChange}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -104,7 +104,7 @@ export function CreateUserForm() {
           value={password}
           onChange={handlePasswordChange}
         />
-      </div>
+      </section>
       <button type="submit" onClick={handleSubmit}>
         Create
       </button>

@@ -43,7 +43,7 @@ export function CreatePledgeForm(props) {
 
   return (
     <form className="form" id="pledge-form" onSubmit={handleSubmit}>
-      <div>
+      <section>
         <label htmlFor="amount">Amount:</label>
         <input
           type="text"
@@ -52,8 +52,8 @@ export function CreatePledgeForm(props) {
           value={amount}
           onChange={handleAmountChange}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <label htmlFor="comment">Comment:</label>
         <input
           type="text"
@@ -62,9 +62,9 @@ export function CreatePledgeForm(props) {
           value={comment}
           onChange={handleCommentChange}
         />
-      </div>
+      </section>
       <p>Is this pledge anonymous:</p>
-      <div>
+      <section>
         <label htmlFor="isOpen">Yes:</label>
         <input
           type="radio"
@@ -84,7 +84,7 @@ export function CreatePledgeForm(props) {
           checked={anonymous === "false"}
           onChange={handleAnonChange}
         />
-      </div>
+      </section>
       <button type="submit">Pledge</button>
     </form>
   );

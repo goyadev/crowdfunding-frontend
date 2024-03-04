@@ -49,19 +49,23 @@ export function ContactForm() {
   return (
     <>
       <h1 className="page-heading">Contact us</h1>
-      <div className="contact-container">
-        <div className="left-col">
+      <section className="contact-container">
+        <article className="left-col">
           <video
             src="/contactVid.mp4"
             autoPlay
             loop
             muted
             className="video"
+            aria-label="video of person reaching out to touch flower in a class"
+            onError="/vid-fallback-img.png"
           ></video>
           {/* Video by Leeloo The First: https://www.pexels.com/video/a-person-touches-a-flower-in-a-glass-6945214/*/}
-        </div>
-        <div className="right-col">
-          <p>Text about Artstarter contact</p>
+        </article>
+        <section className="right-col">
+          <p>
+            Contact us for inquiries, support, and feedback. We're here to help
+          </p>
 
           <form className="form" id="contact-form" onSubmit={validate}>
             <label htmlFor="name">Full name</label>
@@ -98,10 +102,10 @@ export function ContactForm() {
               Send
             </button>
           </form>
-          <div id="error">{error}</div>
-          <div id="success-msg">{successMsg}</div>
-        </div>
-      </div>
+          <article id="error">{error}</article>
+          <article id="success-msg">{successMsg}</article>
+        </section>
+      </section>
     </>
     /* contact form based off of Diana L https://codepen.io/dianalisova/pen/eYJGgKq */
   );

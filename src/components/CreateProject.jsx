@@ -63,17 +63,17 @@ export function CreateProjectForm() {
 
   if (auth.token === null)
     return (
-      <div>
+      <section>
         <h3>{"you're not logged in"}</h3>
         <h3>ヽ(°〇°)ﾉ</h3>
-      </div>
+      </section>
     );
 
   // The form
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <div>
+      <section>
         <label htmlFor="title">Title:</label>
         <input
           type="text"
@@ -82,8 +82,8 @@ export function CreateProjectForm() {
           value={title}
           onChange={handleTitleChange}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <label htmlFor="description">Description:</label>
         <input
           type="text"
@@ -92,8 +92,8 @@ export function CreateProjectForm() {
           value={description}
           onChange={handleDescriptionChange}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <label htmlFor="goal">Goal:</label>
         <input
           type="text"
@@ -102,8 +102,8 @@ export function CreateProjectForm() {
           value={goal}
           onChange={handleGoalChange}
         />
-      </div>
-      <div>
+      </section>
+      <section>
         <label htmlFor="image">Image:</label>
         <input
           type="text"
@@ -112,9 +112,9 @@ export function CreateProjectForm() {
           value={image}
           onChange={handleImageChange}
         />
-      </div>
+      </section>
       <p>Open for pledges:</p>
-      <div>
+      <section>
         <label htmlFor="isOpen">Yes:</label>
         <input
           type="radio"
@@ -133,7 +133,7 @@ export function CreateProjectForm() {
           value="false" // Value for "No" option
           onChange={handleIsOpen}
         />
-      </div>
+      </section>
       <button type="submit" onClick={getTimeAndSendToBackend}>
         Create Project
       </button>
