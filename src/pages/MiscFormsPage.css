@@ -2,6 +2,10 @@ form {
   margin: 5%;
 }
 
+form input {
+  width: 80%;
+}
+
 h1,
 h2,
 h3,
@@ -9,9 +13,17 @@ h4 {
   margin: 2% 5% 2% 5%;
 }
 
+p {
+  margin: 2% 0%;
+}
+
 ul {
   margin: 5%;
   padding: 0%;
+}
+
+.radio-select {
+  display: flex;
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {

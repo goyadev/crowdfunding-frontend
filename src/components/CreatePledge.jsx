@@ -64,7 +64,7 @@ export function CreatePledgeForm(props) {
         />
       </section>
       <p>Is this pledge anonymous:</p>
-      <section>
+      <section className="radio-select">
         <label htmlFor="isOpen">Yes:</label>
         <input
           type="radio"

@@ -7,18 +7,15 @@
 }
 
 .page-heading {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1cqh;
 }
 
 .contact-container {
   display: flex;
-  /* width: 100vw; */
-  /* height: 100vh; */
   background: var(--bg-color);
 }
 
 .left-col {
-  /* width: 45vw; */
   height: 100%;
 
   background-size: cover;
@@ -32,8 +29,6 @@
 
 .right-col {
   background: var(--bg-color);
-  /* width: 50vw; */
-  height: 100vh;
   padding: 5rem 3.5rem;
 }
 
@@ -58,8 +53,7 @@ p {
   color: var(--secondary-color);
   font-size: 0.9rem;
   letter-spacing: 0.01rem;
-  /* width: 40vw; */
-  margin: 0.25rem 0;
+  margin: 5%;
 }
 
 label,
@@ -189,9 +183,7 @@ button:active {
   .video {
     display: none;
   }
-  /* .contact-container {
-    justify-content: center;
-  } */
+
   .right-col {
     padding: 3rem 2rem;
   }

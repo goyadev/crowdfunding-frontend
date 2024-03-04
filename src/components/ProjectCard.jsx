@@ -20,7 +20,7 @@ function ProjectCard(props) {
         <h4>
           About the project: <br />
         </h4>
-        <p>{projectData.description}</p>
+        <p className="project-card-p">{projectData.description}</p>
 
         <h4>Project Goal: {projectData.goal}</h4>
       </Link>

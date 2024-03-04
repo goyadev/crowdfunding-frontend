@@ -114,7 +114,7 @@ export function CreateProjectForm() {
         />
       </section>
       <p>Open for pledges:</p>
-      <section>
+      <section className="radio-select">
         <label htmlFor="isOpen">Yes:</label>
         <input
           type="radio"
