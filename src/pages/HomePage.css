@@ -17,8 +17,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 50px;
-  margin-top: 5vh;
 }
 
 /* media queries */
