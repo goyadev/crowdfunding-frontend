@@ -68,8 +68,8 @@ label,
   font-size: 0.625rem;
 }
 
-form {
-  width: 31.25rem;
+#contact-form {
+  width: 40vw;
   position: relative;
   margin-top: 2rem;
   padding: 1rem 0;
@@ -193,5 +193,9 @@ button:active {
   } */
   .right-col {
     padding: 3rem 2rem;
+  }
+
+  #contact-form {
+    width: 90vw;
   }
 }
