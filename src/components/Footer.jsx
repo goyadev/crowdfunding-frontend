@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <>
       <footer className="footersection">
-        <p>Artstater {new Date().getFullYear()}</p>
+        <p>Artstarter {new Date().getFullYear()}</p>
       </footer>
     </>
   );

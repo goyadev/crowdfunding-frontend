@@ -54,7 +54,7 @@ export function CreateUserForm() {
   };
 
   return (
-    <form className="form">
+    <form className="misc-form">
       <section>
         <label htmlFor="username">Username:</label>
         <input

@@ -4,7 +4,7 @@ import "./MiscFormsPage.css";
 function CreateUserPage() {
   return (
     <>
-      <h1>create account</h1>
+      <h1 className="page-heading">create account</h1>
       <CreateUserForm />
     </>
   );

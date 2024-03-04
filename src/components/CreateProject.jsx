@@ -72,7 +72,7 @@ export function CreateProjectForm() {
   // The form
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="misc-form" onSubmit={handleSubmit}>
       <section>
         <label htmlFor="title">Title:</label>
         <input

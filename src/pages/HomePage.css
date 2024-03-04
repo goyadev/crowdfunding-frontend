@@ -8,6 +8,10 @@
   margin-left: 5%;
 }
 
+#project-list-home h3 {
+  font-weight: normal;
+}
+
 .headersection {
   display: flex;
   flex-direction: column;

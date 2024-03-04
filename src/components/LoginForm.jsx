@@ -43,7 +43,7 @@ function LoginForm() {
     <div>
       <h1 className="page-heading">Login</h1>
 
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="misc-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Username:</label>
           <input

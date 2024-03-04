@@ -63,7 +63,7 @@ export function ContactForm() {
           {/* Video by Leeloo The First: https://www.pexels.com/video/a-person-touches-a-flower-in-a-glass-6945214/*/}
         </article>
         <section className="right-col">
-          <p>
+          <p className="contact-p">
             Contact us for inquiries, support, and feedback. We're here to help
           </p>
 

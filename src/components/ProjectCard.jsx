@@ -14,16 +14,21 @@ function ProjectCard(props) {
     <div className="project-card">
       <Link to={`/project/${projectData.id}`}>
         <img src={projectData.image} className="project-image" />
-        <h3>{projectData.title}</h3>
-        <h4>Started: {formattedDate}</h4>
-        <h4>Created by: {projectData.owner}</h4>
-        <h4>
-          About the project: <br />
-        </h4>
-        <p className="project-card-p">{projectData.description}</p>
-
-        <h4>Project Goal: {projectData.goal}</h4>
+        <h3>{projectData.title}</h3>{" "}
       </Link>
+      <h4>Started: {formattedDate}</h4>
+      <h4>Created by: {projectData.owner}</h4>
+      <br />
+      <br />
+      <h4>
+        About the project: <br />
+      </h4>
+
+      <p className="project-card-p">{projectData.description}</p>
+      <br />
+      <br />
+      <h4>Project Goal: {projectData.goal}</h4>
+
       <CreatePledgeForm projectId={projectData.id} />
     </div>
   );

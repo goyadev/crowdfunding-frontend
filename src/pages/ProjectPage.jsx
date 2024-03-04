@@ -17,24 +17,28 @@ function ProjectPage() {
   const isOpenStatus = project.is_open;
 
   return (
-    <>
-      <h2>{project.title}</h2>
-      <img src={project.image} />
-      <h3>Created at: {formattedDate}</h3>
+    <div className="project-page">
+      <h1>{project.title}</h1>
+      <img src={project.image} className="project-image" />
+      <h2>Created: {formattedDate}</h2>
       <h3>{isOpenStatus ? "Project Open" : "Project Closed"}</h3>
       <p className="project-p">{project.description}</p>
+      <br />
+      <br />
       <CreatePledgeForm projectId={id} />
+      <br />
+      <br />
       <h3>Pledges:</h3>
       <ul>
         {project.pledges.map((pledgeData, key) => {
           return (
             <li key={key}>
-              {pledgeData.amount} from {pledgeData.supporter}
+              ${pledgeData.amount} from {pledgeData.supporter}
             </li>
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
 
